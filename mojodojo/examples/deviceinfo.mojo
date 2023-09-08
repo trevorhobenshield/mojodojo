@@ -30,6 +30,7 @@ from sys.info import (
     _current_target,
     _current_cpu,
     _triple_attr,
+    simdbitwidth,
 )
 
 
@@ -61,8 +62,9 @@ def main():
     if is_apple_m1():
         cpu_features = cpu_features.join(" Apple M1")
     print("System information: ")
-    print("    OS          : ", os)
-    print("    CPU         : ", cpu)
-    print("    Arch        : ", arch)
-    print("    Num Cores   : ", num_cores())
-    print("    CPU Features:", cpu_features)
+    print("    OS            : ", os)
+    print("    CPU           : ", cpu)
+    print("    Arch          : ", arch)
+    print("    Num Cores     : ", num_cores())
+    print("    CPU Features  :", cpu_features)
+    print("    SIMD Bitwidth : ", simdbitwidth())

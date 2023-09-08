@@ -23,6 +23,7 @@ setup(
     keywords='mojo dojo',
     packages=find_packages(),
     include_package_data=True,
+    package_data={'': ['*']},  # include .mojo files
     classifiers=[
         'Intended Audience :: Developers',
         'Natural Language :: English',
